@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: delivr-engine
+    env: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/notification-engine-1.0.0.jar
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        value: jdbc:postgresql://dpg-danduqjbc2fs73e35a70-a/delivr_engine_db
+      - key: DATABASE_USERNAME
+        value: delivr_engine_db_user
+      - key: DATABASE_PASSWORD
+        value: GoFRAC2iBLRzrc6LjQKk421Jj9fmauGZ
+      - key: MAIL_USERNAME
+        value: lokeshgaddam2514@gmail.com
+      - key: MAIL_PASSWORD
+        value: dnncuyuhinrsyqjh
+      - key: JWT_SECRET
+        value: ThisIsAVeryLongSecretKeyForJWTTokenGenerationAndValidation2024NotificationEngine
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
