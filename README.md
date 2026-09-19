@@ -164,9 +164,4 @@ DELIVERED   retry_count < 5?
 
 ---
 
-## What's Next (If Extended)
 
-- Replace DB queue with **Kafka** for true async processing at scale
-- Add **Webhook** channel (HTTP POST to client URL)
-- Add **real SMS** via Twilio or MSG91
-- Push notifications to dead-notification dashboard via **WebSocket**
